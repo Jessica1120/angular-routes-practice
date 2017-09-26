@@ -11,13 +11,18 @@
     <script src='./scripts/controllers/lecter.controller.js'></script>
     <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Fictional Characters</title>
 </head>
 <body ng-app="myApp">
-    <nav>
-        <ul>
-            <li><a href="#!/">Home<a></li>
-            <li><a href="#!/">Hannibel Lecter</a></li>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#!">Characters</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#!/">Home</a></li>
+            <li class="active"><a href="#!/lecter">Hannibel Lecter</a></li>
         </ul>
     </nav>
     <ng-view></ng-view>   
