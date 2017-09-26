@@ -6,6 +6,9 @@ myApp.config(function($routeProvider) {
         controller: 'HomeController as HC'
     }).when('/lecter', {
         templateUrl:    'views/lecter.html',
-        controller: 'LecterController as LC' //add 2 more character Controllers
+        controller: 'LecterController as LC' 
+    }).when('/jack', {
+        templateUrl:    'views/jack.html',
+        controller: 'JackController as JC'
     }).otherwise({redirectTo: '/'});
 });
