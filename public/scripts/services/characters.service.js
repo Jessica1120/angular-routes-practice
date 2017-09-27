@@ -3,6 +3,8 @@ myApp.service('CharacterService', function($http) {
 
     var self = this;
 
+    self.skillLevel = { level: Math.floor(Math.random() * 10) + 1};
+
     self.totalSlaps = { count: 0 };
     
     self.slapCounter = function() {

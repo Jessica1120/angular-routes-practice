@@ -4,11 +4,14 @@ myApp.controller('JackController', function (CharacterService) {
     var vm = this;
 
     CharacterService.getServerInfo();
+    
     vm.serverInfo = CharacterService.serverInfo;
+
+    vm.skillLevel = CharacterService.skillLevel;
     
-        vm.totalSlaps = CharacterService.totalSlaps
+    vm.totalSlaps = CharacterService.totalSlaps
     
-        vm.totalSlapUpdate = function() {
+    vm.totalSlapUpdate = function() {
             console.log('in slap update');
             CharacterService.slapCounter();
         };//end totalSlapUpdate Function
