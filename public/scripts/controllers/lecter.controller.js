@@ -8,13 +8,15 @@ myApp.controller('LecterController', function (CharacterService){
     vm.serverInfo = CharacterService.serverInfo;
 
     vm.totalSlaps = CharacterService.totalSlaps;
+    
+    //vm.qualityLevel = CharacterService.qualityLevel;
 
     vm.skillLevel = CharacterService.skillLevel;
-    
 
     vm.totalSlapUpdate = function() {
         console.log('in slap update');
         CharacterService.slapCounter();
+        
     };//end totalSlapUpdate Function
 
 });//end LC function
