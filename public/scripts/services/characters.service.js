@@ -3,24 +3,25 @@ myApp.service('CharacterService', function($http) {
 
     var self = this;
 
-    self.skillLevel = { level: Math.floor(Math.random() * 10) + 1};
-    //self.qualityLevel = { level: Math.floor(Math.random() * 10) + 1};
-
-    self.totalSlaps = { count: 0 };
-    
+   self.skillLevel = { level: [Math.floor(Math.random() * 10) + 1]};
+   self.winner = {status: []}
+   self.totalSlaps = { count: 0 };
+ 
     self.slapCounter = function() {
         self.totalSlaps.count++;
-        var quality = Math.floor(Math.random() * 10) + 1;
+        self.whoWins()
+    };
+    self.whoWins = function() {
+        var quality = Math.floor(Math.random() * 10) + 1
+       
         if (self.skillLevel.level <= quality) {
-            console.log('character wins');
+            console.log('character wins', self.skillLevel.level, quality);
+            self.winner.status.push('You Lose.')
         } else {
             console.log('you win');
+            self.winner.status.push('You Win', self.skillLevel.level, quality);
         };
     };
-
-    // self.qualityLevel = function() {
-        
-    // };
    
     self.serverInfo = {list: []};
 

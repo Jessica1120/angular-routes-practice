@@ -13,6 +13,8 @@ myApp.controller('LecterController', function (CharacterService){
 
     vm.skillLevel = CharacterService.skillLevel;
 
+    vm.winner = CharacterService.winner;
+
     vm.totalSlapUpdate = function() {
         console.log('in slap update');
         CharacterService.slapCounter();
